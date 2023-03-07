@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232526;
+  --mainYellow2: #ffa400;
+}
+
+body {
+  font-family: "Oswald", sans-serif !important;
+  background-color: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
+  text-align: center;
+}
+.App {
+  text-align: center;
+}
+.text-title {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.text-blue {
+  color: var(--mainBlue);
+}
+/* Navbar component*/
+.navbar-dark {
+  background-color: var(--mainBlue);
+}
+.btns {
+  color: var(--lightBlue);
+  background: transparent;
+  border: 0.01rem solid;
+  text-transform: capitalize;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  padding: 0.03rem;
+  transition: all 0.5s ease-in-out;
+  margin-left: 3em;
+}
+
+.btns:hover {
+  background-color: rgb(130, 199, 192);
+  color: var(--mainBlue);
+}
+.text-light {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 2em;
+}
+@media (min-width: 800px) {
+  .cart {
+    margin-left: 60%;
+  }
+}
+
+/*Product component styles */
+.card {
+  transition: all 1s linear;
+  border: none;
+  overflow: hidden;
+}
+.img-container {
+  position: relative;
+  border: none;
+}
+.cart-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(100%, 100%);
+  border: none;
+  background-color: var(--lightBlue);
+  color: var(--mainWhite);
+  padding: 0.3em;
+  font-size: 1.4rem;
+}
+
+.img-container:hover .imgs {
+  transform: scale(1.2);
+}
+.img-container:hover .cart-btn {
+  transform: translate(0, 0);
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  border-top: none;
+  background-color: transparent;
+}
+/* details componenet styles */
+
+.details-btn {
+  color: var(--lightBlue);
+  background: transparent;
+  border: 0.01rem solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.03rem;
+}
+.add-btn {
+  color: var(--mainYellow2);
+  background: transparent;
+  border: 0.01rem solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.03rem;
+  transition: all 1s linear;
+}
+.add-btn:hover {
+  background-color: var(--mainYellow2);
+  color: black;
+}
+
+/* Modal componenet style*/
+.main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal-component {
+  background-color: var(--mainWhite);
+}
+
+/*cart items button styling */
+.btn-black {
+  text-transform: capitalize;
+  font-size: 1rem !important;
+  color: var(--mainDark);
+  border-radius: 0;
+  border: solid var(--mainDark) 0.14rem !important;
+}
+
+.btn-black:hover {
+  background-color: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow2);
+}
+.carttotal {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto !important;
+  margin-top: 2em !important;
+}
+
+@media (max-width: 800px) {
+  .carttotal {
+    margin: auto !important;
+  }
+}
